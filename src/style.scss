@@ -1,0 +1,335 @@
+/******************* VARIABLES *******************/
+// Colors
+$darkestBlue: #1e2032;
+$deepPurple: #321B36;
+$darkMaroon: #751b45;
+$fullBlue: #2558b1;
+$iceRed: #ea8686;
+$almond: #D5A675;
+$lightGrey: #eadfd7;
+$paste: #F6EAEA;
+
+// Shadows
+$hardShadow: 0px 5px 8px #00000075;
+$softShadow: 0px 5px 8px #43434375;
+
+// Title Text Properties
+$titleTextColor: $darkestBlue;
+$titleTextWeight: 100;
+$titleFontFamily: 'Oldenburg', cursive;
+$titleFontSize: 5rem;
+
+// Subtitle Text Properties
+$subtitleTextColor: $darkMaroon;
+$subtitleTextWeight: 800;
+$subtitleFontFamily: 'Arvo', sans-serif;
+$subtitleFontSize: 1.6rem;
+
+// Paragraph Text Propterties
+$paragraphTextColor: $darkMaroon;
+$paragraphTextWeight: 500;
+$paragraphFontFamily: 'Telex', serif;
+$paragraphFontSize: 0.5rem;
+
+// Handwriting Text Propterties
+$handwritingTextColor: $iceRed;
+$handwritingTextWeight: 100;
+$handwritingFontFamily: 'Indie Flower', cursive;
+$handwritingFontSize: 1rem;
+
+
+/******************* BEGIN STYLING *******************/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('http://www.textures4photoshop.com/tex/thumbs/watercolor-frame-texture-background-free-thumb40.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+// Spacer
+#spacer {
+    margin: 30vh 0;
+}
+
+// White mask
+#white-mask {
+    background-color: $paste;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 40%;
+    z-index: -1;
+}
+
+// HeaderBar
+.header-bar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $darkestBlue;
+    position: fixed;
+    box-shadow: 0 0 8px black;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.khaled {
+    font-family: $titleFontFamily;
+    font-weight: 600;
+    color: $paste;
+    padding-left: 32px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.item {
+    text-decoration: none;
+    margin-top: 3px;
+    padding: 0 2em;
+    color: $paste;
+    font-family: $titleFontFamily;
+    transition: color 0.3s;
+}
+.item:hover {color: $iceRed}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+// HomePage
+.full-name {
+    opacity: 100;
+    font-family: $titleFontFamily;
+    color: $darkestBlue;
+    font-weight: 100;
+    font-size: $titleFontSize;
+    margin: 0;
+    text-align: center;
+}
+
+#pitch {
+    font-family: $titleFontFamily;
+    font-size: $subtitleFontSize;
+    font-weight: bold;
+    color: $darkMaroon;
+    margin: 50px 30vw;
+    text-align: center;
+    span {
+        font-family: $handwritingFontFamily;
+    }
+}
+
+@keyframes flow-down {
+    0% { transform: translateY(-30px); opacity: 0; }
+    50% { transform: translateY(0px); opacity: 100; }
+    100% { transform: translateY(60px); opacity: 0; }
+}
+
+#arrow-down {
+    margin: 150px 50%;
+    opacity: 0;
+    animation: flow-down 1.5s linear infinite;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $darkestBlue;
+    margin: 150px 48.3vw;
+    opacity: 0;
+    animation: flow-down 1.5s linear 1.5s infinite;
+}
+
+// Skills
+h3 {
+    text-align: center;
+    font-family: $subtitleFontFamily;
+    font-size: $subtitleFontSize;
+    font-weight: $subtitleTextWeight;
+    color: $subtitleTextColor;
+    margin-bottom: 60px;
+}
+#skills::after {
+    content: "(what I can do)";
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $handwritingFontFamily;
+    font-weight: $handwritingTextWeight;
+}
+
+.container {
+    list-style: none;
+    background-color: $lightGrey;
+    margin: auto 20vw 130px 20vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    grid-gap: 20px;
+    box-shadow: $hardShadow;
+}
+
+.skill-icon {
+    background-color: white;
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    box-shadow: $softShadow;
+    img {
+        height: 60px;
+        width: auto;
+        margin: 30px;
+        padding-left: 10px;
+    }
+}
+
+#javascript, #terminal {
+    padding-left: 8px;
+}
+
+// Projects
+#projects::after {
+    content: "(what I've done with what I can do)";
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $handwritingFontFamily;
+    font-weight: $handwritingTextWeight;
+}
+
+.main-img {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 600px;
+    transition: width 0.3s ease-out;
+}
+.main-img:hover {
+    width: 570px;
+    cursor: pointer;
+}
+
+.card-body {
+    margin-top: 20px;
+}
+
+.project-card {
+    width: 591px;
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: $softShadow;
+    li img {
+        width: auto;
+        height: 30px;
+        padding: 0 10px;
+    }
+}
+
+.skills-used {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+// Contact
+#contact::after {
+    content: "(wanna talk about what I can do?)";
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $handwritingFontFamily;
+    font-weight: $handwritingTextWeight;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    padding: 10px 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+._label {
+    font-family: $paragraphFontFamily;
+    font-weight: $paragraphTextWeight;
+    color: $paragraphTextColor;
+    padding: 30px;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    font-family: $paragraphFontFamily;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: $hardShadow;
+}
+
+#contact-email {
+    width: 230px;
+}
+
+#contact-msg {
+    margin: 5px;
+    padding: 10px;
+    font-family: $paragraphFontFamily;
+    width: 78%;
+    margin-bottom: 4rem;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: $hardShadow;
+}
+
+button {
+    padding: 30px;
+    width: 15rem;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $titleFontFamily;
+    font-weight: $titleTextWeight;
+    font-size: 25px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: $hardShadow;
+    background-color: $iceRed;
+    transition: background-color 0.3s;
+}
+button:hover  {
+    background-color: #df6060;
+    cursor: pointer;
+}
+
+// Footer
+footer {
+    padding: 10px 0;
+    background-color: $darkestBlue;
+    text-align: center;
+    font-family: $titleFontFamily;
+    font-weight: $titleTextWeight;
+    color: $paste;
+}

@@ -171,14 +171,13 @@ h3 {
 .container {
     list-style: none;
     background-color: $lightGrey;
-    margin: auto 20vw 130px 20vw;
-    padding: 100px;
+    margin: auto 20vw 130px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 50px 70px;
     border-radius: 10px;
     grid-gap: 20px;
     box-shadow: $hardShadow;

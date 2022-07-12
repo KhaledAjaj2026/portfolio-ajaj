@@ -151,7 +151,7 @@ nav {
 }
 
 // Skills
-h3 {
+.general-title {
     text-align: center;
     font-family: $subtitleFontFamily;
     font-size: $subtitleFontSize;
@@ -223,10 +223,6 @@ h3 {
     cursor: pointer;
 }
 
-.card-body {
-    margin-top: 20px;
-}
-
 .project-card {
     width: 591px;
     background-color: white;
@@ -240,6 +236,62 @@ h3 {
         padding: 0 10px;
     }
 }
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+#project-1 {
+    font-size: 20px;
+}
+#project-1::after {
+    content: "click the image!";
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $handwritingFontFamily;
+    font-size: 20px;
+    font-weight: $handwritingTextWeight;
+}
+
+#project-2 {
+    font-size: 20px;
+}
+#project-2::after {
+    content: "more projects on the way";
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $handwritingFontFamily;
+    font-size: 20px;
+    font-weight: $handwritingTextWeight;
+}
+
+.main-img {
+    border: 1px solid $lightGrey;
+}
+
+.card-body {
+    margin-top: 20px;
+    .git-link {
+        margin-top: 30px;
+    }
+    .git-link_anchor {
+        text-decoration: none;
+        color: black;
+        font-family: $subtitleFontFamily;
+        border-radius: 15px;
+        border: 1px solid $darkestBlue;
+        padding: 5px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+    .git-link_anchor:hover {
+        background-color: $darkMaroon;
+        color: $paste;
+    }
+}
+
+
 
 .skills-used {
     list-style: none;
@@ -257,6 +309,16 @@ h3 {
     font-family: $handwritingFontFamily;
     font-weight: $handwritingTextWeight;
 }
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1900px) {
+        padding: 60px;
+    }
+}
+
 
 .forms {
     display: flex;
@@ -278,6 +340,10 @@ form {
     padding: 30px;
 }
 
+.msg {
+    padding-bottom: 90px;
+}
+
 input {
     margin: 5px;
     padding: 10px;
@@ -287,7 +353,7 @@ input {
     box-shadow: $hardShadow;
 }
 
-#contact-email {
+#contact-name, #contact-email {
     width: 230px;
 }
 

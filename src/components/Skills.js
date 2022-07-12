@@ -3,7 +3,7 @@ import React from 'react'
 function Skills() {
     return (
         <div data-aos="fade-down" data-aos-duration="700">
-            <h3 id="skills">Skills</h3>
+            <h3 id="skills" className="general-title">Skills</h3>
             <div>
                 <ul className="skills container">
                     <li>

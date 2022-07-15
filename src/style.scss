@@ -77,17 +77,22 @@ body {
     z-index: 1000;
 }
 
+#icon {
+    color: $paste;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#menu-items {
+    display: none;
+    padding-top: 50px;
+}
+
 .khaled {
     font-family: $titleFontFamily;
     font-weight: 600;
     color: $paste;
     padding-left: 32px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 .item {
@@ -97,11 +102,6 @@ nav {
     color: $paste;
     font-family: $titleFontFamily;
     transition: color 0.3s;
-}
-.item:hover {color: $iceRed}
-
-@media screen and (max-width: 600px) {
-    
 }
 
 // HomePage
@@ -127,16 +127,38 @@ nav {
     }
 }
 
-@keyframes flow-down {
+@media (max-width: 700px) {
+    .full-name {
+        font-size: 60px;
+    }
+    #pitch {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .full-name {
+        font-size: 40px;
+    }
+    #pitch {
+        font-size: 15px;
+    }
+}
+
+@keyframes flow-down_large {
     0% { transform: translateY(-30px); opacity: 0; }
     50% { transform: translateY(0px); opacity: 100; }
     100% { transform: translateY(60px); opacity: 0; }
 }
-
-#arrow-down {
-    margin: 150px 50%;
-    opacity: 0;
-    animation: flow-down 1.5s linear infinite;
+@keyframes flow-down_med {
+    0% { transform: translateY(-20px); opacity: 0; }
+    50% { transform: translateY(0px); opacity: 100; }
+    100% { transform: translateY(40px); opacity: 0; }
+}
+@keyframes flow-down_small {
+    0% { transform: translateY(-10px); opacity: 0; }
+    50% { transform: translateY(0px); opacity: 100; }
+    100% { transform: translateY(20px); opacity: 0; }
 }
 
 .arrow-down {
@@ -147,7 +169,27 @@ nav {
     border-top: 20px solid $darkestBlue;
     margin: 150px 48.3vw;
     opacity: 0;
-    animation: flow-down 1.5s linear 1.5s infinite;
+    animation: flow-down_large 1.5s linear 1.5s infinite;
+}
+
+@media (max-width: 700px) {
+    .arrow-down {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid $darkestBlue;
+        margin-top: 100px;
+        animation: flow-down_med 1.5s linear 1.5s infinite;
+    }
+}
+
+@media (max-width: 400px) {
+    .arrow-down {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $darkestBlue;
+        margin-top: 70px;
+        animation: flow-down_small 1.5s linear 1.5s infinite;
+    }
 }
 
 // Skills

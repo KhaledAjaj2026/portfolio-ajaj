@@ -283,10 +283,10 @@ body {
     margin-bottom: 20px;
 }
 
-#project-1 {
+.project-title {
     font-size: 20px;
 }
-#project-1::after {
+.project-title::after {
     content: "click the image!";
     display: flex;
     justify-content: center;
@@ -296,10 +296,10 @@ body {
     font-weight: $handwritingTextWeight;
 }
 
-#project-2 {
+#project-unfinished {
     font-size: 20px;
 }
-#project-2::after {
+#project-unfinished::after {
     content: "more projects on the way";
     display: flex;
     justify-content: center;
